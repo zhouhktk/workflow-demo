@@ -1,0 +1,27 @@
+# 工作流的名称
+name: workflow-demo
+
+# on 用来控制什么时候执行工作流
+on:
+  # 在 push 或者 pull_request 时触发工作流
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+# job
+jobs:
+  first_job:
+    # job的说明
+    name: 第一个job
+    # runs-on字段指定运行所需要的虚拟机环境
+    runs-on: ubuntu-18.04
+    steps:
+      - name: 打印问候
+        # 设置环境变量
+        env:
+          MY_VAR: 测试环境变量
+        run: |
+          echo $MY_VAR
