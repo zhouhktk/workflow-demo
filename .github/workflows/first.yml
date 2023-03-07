@@ -17,7 +17,7 @@ jobs:
     # job的说明
     name: 第一个job
     # runs-on字段指定运行所需要的虚拟机环境
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: 打印问候
         # 设置环境变量
