@@ -1,10 +1,12 @@
 name: Packge And Release
 
-# 检测到 src 文件内 java 文件有变动时执行workflow
+# 检测到 src 文件内 java 文件有变动 或者 推送master 时执行workflow
 on:
   push:
     paths:
       - '**/*src/**/*.java'
+    branches:
+      - master
 
 jobs:
   package_publish:
