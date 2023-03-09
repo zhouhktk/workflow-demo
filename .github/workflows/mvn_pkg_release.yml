@@ -43,7 +43,7 @@ jobs:
     - name: Publish Release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
-        # 引用在 Secrets 中设置环境变量
+        # 引用在 Secrets 中设置环境变量，内容是github token
         repo_token: "${{ secrets.WF_TOKEN }}"
         automatic_release_tag: "${{ env.RELEASE_VERSION }}"
         prerelease: false
