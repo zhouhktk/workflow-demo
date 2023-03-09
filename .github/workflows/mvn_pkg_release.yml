@@ -21,6 +21,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
+        distribution: 'z'
         cache: maven
     # Maven 打包 
     - name: Build with Maven
